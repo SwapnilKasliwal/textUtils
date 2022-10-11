@@ -16,7 +16,7 @@ function App() {
   const toggleHandler = ()=>{
     if(mode === 'light'){
       setMode('dark')
-      document.body.style.backgroundColor = '#2f4a5a'
+      document.body.style.backgroundColor = 'rgb(4 17 63)'
       showAlert('Dark mode has been enabled', 'success')
     }
     else{
@@ -40,8 +40,8 @@ function App() {
    <Alert alert={alert}/>
    <div className="container my-3">
       <Routes>
-          <Route path="/about" element = {<About/>}/>
-          <Route path="/" element = { <Form heading="Enter you text here" mode ={mode} showAlert={showAlert}/>} />
+          <Route path="/about" element = {<About mode = {mode}/>}/>
+          <Route path="/" element = { <Form heading="Enter you text here" mode ={mode} showAlert={showAlert}/>}/>
       </Routes>
    </div>
    </Router>
